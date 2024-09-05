@@ -1,9 +1,8 @@
+import streamlit as st
 from tavily import TavilyClient
 import requests
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 def get_weather(city: str) -> str:
     """
@@ -19,7 +18,7 @@ def get_weather(city: str) -> str:
     Returns:
         str: A JSON string containing the current weather data or an error message if the request fails.
     """
-    API_KEY = os.environ["WEATHER_API_KEY"]
+    API_KEY = st.secrets["WEATHER_API_KEY"]
 
     url = f'http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={city}'
 
@@ -43,7 +42,7 @@ def search_web(query: str) -> str:
         str: The search results in JSON format.
     """
     
-    client = TavilyClient(api=os.environ["TAVILY_API_KEY"])
+    client = TavilyClient(api=st.secrets["TAVILY_API_KEY"])
     search_results = client.search(query=query)
     return search_results
     
