@@ -34,7 +34,7 @@ MODEL_ROLE = 'ai'
 AI_AVATAR_ICON = Image.open('asset\\logo 1 (1).png')
 USER_AVATAR_ICON = '🧐'
 
-with open( "style.css" ) as css:
+with open( "asset/style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 
