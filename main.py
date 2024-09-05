@@ -10,8 +10,6 @@ import joblib
 from tool_utils import get_weather, search_web
 
 
-# Load environment variables
-load_dotenv()
 favicon_image = Image.open('asset\\logo 1 (2).png')
 
 # Configure Google AI
