@@ -1,6 +1,5 @@
 import streamlit as st
 import google.generativeai as genai
-from dotenv import load_dotenv
 import os
 import tempfile
 import time
@@ -16,7 +15,7 @@ load_dotenv()
 favicon_image = Image.open('asset\\logo 1 (2).png')
 
 # Configure Google AI
-genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
+genai.configure(api_key=st.secrets("GOOGLE_AI_API_KEY"))
 
 st.set_page_config(
     page_title="Stylfit",
