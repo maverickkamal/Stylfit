@@ -13,7 +13,7 @@ from tool_utils import get_weather, search_web
 favicon_image = Image.open('asset/logo 1 (2).png')
 
 # Configure Google AI
-genai.configure(api_key=st.secrets("GOOGLE_AI_API_KEY"))
+genai.configure(api_key=st.secrets["GOOGLE_AI_API_KEY"])
 
 st.set_page_config(
     page_title="Stylfit",
