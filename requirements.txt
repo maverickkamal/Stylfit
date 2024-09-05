@@ -1,0 +1,5 @@
+streamlit
+google-generativeai
+tavily-python
+requests
+joblib
