@@ -10,7 +10,7 @@ import joblib
 from tool_utils import get_weather, search_web
 
 
-favicon_image = Image.open('asset\\logo 1 (2).png')
+favicon_image = Image.open('asset/logo 1 (2).png')
 
 # Configure Google AI
 genai.configure(api_key=st.secrets("GOOGLE_AI_API_KEY"))
@@ -28,7 +28,7 @@ st.set_page_config(
 
 new_chat_id = f'{time.time()}'
 MODEL_ROLE = 'ai'
-AI_AVATAR_ICON = Image.open('asset\\logo 1 (1).png')
+AI_AVATAR_ICON = Image.open('asset/logo 1 (1).png')
 USER_AVATAR_ICON = '🧐'
 
 with open( "asset/style.css" ) as css:
@@ -157,7 +157,7 @@ with st.sidebar:
     new_size = (120, 120)
 
     # Load the image and resize it
-    image = Image.open('asset\\logo 1 (3).png')
+    image = Image.open('asset/logo 1 (3).png')
     image = image.resize(new_size)
 
     col1, col2 = st.columns(2, vertical_alignment="center")
